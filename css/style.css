@@ -67,6 +67,15 @@ a:hover { color: var(--navy); }
 .section--navy h3,
 .section--navy p { color: var(--white); }
 
+/* ── Accessibility utility ── */
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
+}
+
 /* ── Site header ── */
 .site-header {
   position: sticky;
@@ -318,6 +327,62 @@ a:hover { color: var(--navy); }
 }
 .form-status.success { display: flex; background: #E6F4EA; color: #1B5E20; border: 1px solid #A8D5B0; gap: 0.5rem; align-items: flex-start; }
 .form-status.error { display: flex; background: #FCE8E6; color: #922B21; border: 1px solid #F5B7B1; gap: 0.5rem; align-items: flex-start; }
+
+/* ── Process / how we work ── */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+  counter-reset: process;
+}
+.process-step { position: relative; padding-top: 1rem; }
+.process-step::before {
+  counter-increment: process;
+  content: "0" counter(process);
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--azure);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  opacity: 0.35;
+}
+.process-step h3 { margin-bottom: 0.5rem; color: var(--navy); }
+.process-step p { font-size: 0.9rem; color: var(--grey-mid); }
+
+/* ── Services page ── */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
+  margin-top: 2.5rem;
+}
+.service-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem 1.75rem;
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+.service-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); border-color: var(--azure); }
+.service-card h3 { color: var(--navy); margin-bottom: 0.6rem; }
+.service-card p { font-size: 0.9rem; color: var(--grey-mid); }
+.service-card ul { font-size: 0.875rem; color: var(--grey-mid); padding-left: 1.2rem; margin-top: 0.75rem; }
+.service-card ul li + li { margin-top: 0.3rem; }
+
+/* ── Stats strip ── */
+.stats-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding-block: 3rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.stat { text-align: center; }
+.stat-number { font-size: 2.25rem; font-weight: 800; color: var(--navy); line-height: 1; }
+.stat-label { font-size: 0.85rem; color: var(--grey-mid); margin-top: 0.35rem; }
 
 /* ── Policy / support pages ── */
 .prose { max-width: 72ch; }
