@@ -94,14 +94,16 @@ a:hover { color: var(--navy); }
 }
 
 .site-logo {
-  font-size: 1.25rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  color: var(--white);
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  white-space: nowrap;
+  flex-shrink: 0;
 }
-.site-logo span { color: var(--azure); }
+.site-logo img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
 
 .site-nav { display: flex; align-items: center; gap: 0.25rem; }
 .site-nav a {
