@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — 1st Soft</title>
+  <meta name="description" content="Get in touch with 1st Soft. We reply within one business day." />
+  <link rel="canonical" href="https://1stsoft.co.uk/contact.html" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a href="/" class="site-logo" aria-label="1st Soft home">1ST <span>SOFT</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+          <rect y="4" width="22" height="2" rx="1" fill="currentColor"/>
+          <rect y="10" width="22" height="2" rx="1" fill="currentColor"/>
+          <rect y="16" width="22" height="2" rx="1" fill="currentColor"/>
+        </svg>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/contact.html" aria-current="page">Contact</a>
+        <a href="/contact.html" class="nav-cta">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ── Page header ── -->
+    <div class="page-header">
+      <div class="container">
+        <h1>Contact us</h1>
+        <p>We read every message and reply within one business day.</p>
+      </div>
+    </div>
+
+    <!-- ── Contact content ── -->
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Left: details -->
+        <div class="contact-details">
+          <h2>Get in touch</h2>
+
+          <div class="contact-item">
+            <div class="contact-item-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4a1 1 0 011-1h10a1 1 0 011 1v8a1 1 0 01-1 1H3a1 1 0 01-1-1V4z" stroke="white" stroke-width="1.5"/><path d="M2 4l6 5 6-5" stroke="white" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="contact-item-text">
+              <strong>Email</strong>
+              <a href="mailto:hello@1stsoft.co.uk">hello@1stsoft.co.uk</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 2h3l1 3-1.5 1.5a9 9 0 004 4L11 9l3 1v3a1 1 0 01-1 1A12 12 0 012 3a1 1 0 011-1z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="contact-item-text">
+              <strong>Phone</strong>
+              <a href="tel:02030344600">0203 0344 600</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.515 1.5 3.5 3.515 3.5 6c0 3.75 4.5 8.5 4.5 8.5S12.5 9.75 12.5 6c0-2.485-2.015-4.5-4.5-4.5z" stroke="white" stroke-width="1.5"/><circle cx="8" cy="6" r="1.5" stroke="white" stroke-width="1.5"/></svg>
+            </div>
+            <div class="contact-item-text">
+              <strong>Address</strong>
+              71-75 Shelton Street<br />London, WC2H 9JQ
+            </div>
+          </div>
+
+          <p style="margin-top: 2rem; font-size: 0.875rem; color: var(--grey-mid);">
+            1st Soft Ltd is registered in England &amp; Wales.<br />
+            We typically reply within one business day.
+          </p>
+        </div>
+
+        <!-- Right: form -->
+        <div class="contact-form-wrap">
+          <h2>Send a message</h2>
+          <form id="contact-form" novalidate aria-label="Contact form">
+
+            <div class="form-group">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="name-error" />
+              <p class="field-error" id="name-error" role="alert"></p>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error" />
+              <p class="field-error" id="email-error" role="alert"></p>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone <span class="optional">(optional)</span></label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" aria-describedby="phone-hint" />
+              <p id="phone-hint" style="font-size:0.8rem;color:var(--grey-mid);margin-top:0.3rem;">Include country code if outside the UK.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required aria-describedby="message-error"></textarea>
+              <p class="field-error" id="message-error" role="alert"></p>
+            </div>
+
+            <!-- Honeypot — hidden from real users, filled by bots -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="website">Website (leave blank)</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <button type="submit" class="btn btn--blue form-submit">Send message</button>
+
+            <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">1ST <span>SOFT</span></div>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="/">Home</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy policy</a>
+          <a href="/support.html">Support</a>
+        </nav>
+      </div>
+      <p class="footer-copy">
+        &copy; <span id="year"></span> 1st Soft Ltd &middot; Registered in England &amp; Wales &middot;
+        71-75 Shelton Street, London, WC2H 9JQ
+      </p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="/js/main.js"></script>
+  <script src="/js/contact.js"></script>
+</body>
+</html>

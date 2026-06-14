@@ -1,0 +1,11 @@
+# Cloudflare Pages / Workers config
+name = "1stsoft-website"
+compatibility_date = "2024-01-01"
+pages_build_output_dir = "."
+
+# Secrets (never put values here — set via `wrangler secret put` or Cloudflare dashboard)
+# SES_ACCESS_KEY_ID
+# SES_SECRET_ACCESS_KEY
+# SES_REGION
+# SES_FROM
+# CONTACT_TO

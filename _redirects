@@ -1,0 +1,16 @@
+# Cloudflare Pages _redirects
+# Migrating from WordPress — 301 redirects from old URL paths to new equivalents
+
+/about-us/          /               301
+/about/             /               301
+/services/          /               301
+/services           /               301
+/blog/              /               301
+/blog               /               301
+
+# WordPress common paths that should return 404 rather than 200
+/wp-admin/*         /               301
+/wp-login.php       /               301
+/wp-content/*       /               404
+
+# Trailing-slash normalisation handled by Cloudflare Pages automatically
